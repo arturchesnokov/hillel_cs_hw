@@ -9,7 +9,7 @@ public class Customer
     
     public override string ToString()
     {
-        return $"{FirstName} {LastName} - Ordered for ${Order}";
+        return $"{FirstName} {LastName} - Ordered on adress: {Adress} for ${Order}";
     }
     
 }

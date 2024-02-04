@@ -1,7 +1,6 @@
-﻿// task 1
+﻿using HW2Linq;
 
-using HW2Linq;
-
+// task 1
 Console.WriteLine("--- Task 1 ---");
 var words = new List<string>
 {
@@ -47,8 +46,8 @@ var students = new List<Student>()
         Mark = 10
     }
 };
-var bestStudent = students.MaxBy(student => student.Mark);
-Console.WriteLine($"{bestStudent?.FirstName} {bestStudent?.LastName} has a best mark: {bestStudent?.Mark}");
+
+Console.WriteLine($"Student with the best mark: {students.MaxBy(student => student.Mark)}");
 
 // task 4
 Console.WriteLine("--- Task 4 ---");

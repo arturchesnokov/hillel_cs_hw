@@ -9,6 +9,6 @@ public class Employee
 
     public override string ToString()
     {
-        return $"{FirstName} {LastName} - works from {EmploymentDate}";
+        return $"{FirstName} {LastName} ({BirthDate})- works from {EmploymentDate}";
     }
 }
