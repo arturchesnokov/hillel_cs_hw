@@ -2,16 +2,28 @@
 
 var libBooks = new List<Book>()
 {
-    new Book("Dune", "Frank Herbert", "Science fiction", "Chilton Books"),
     new Book("The Martian", "Andy Weir", "Science fiction", "Crown Publishing Group"),
     new Book("Ready Player One", "Ernest Cline", "Science fiction", "Crown Publishing Group"),
     new Book("Insurgent", "Veronica Roth", "Fantasy", "Katherine Tegen Books")
 };
 
 var bestLibrary = new Library("The Best library", libBooks);
+var dune = new Book("Dune", "Frank Herbert", "Science fiction", "Chilton Books");
 
-Console.WriteLine($"Books of {bestLibrary.Name}:");
-bestLibrary.Books.ForEach(Console.WriteLine);
+bestLibrary.AddBook(dune);
+bestLibrary.AvailableBooks();
+bestLibrary.GiveOutBook("Dune");
 
-bestLibrary.FindBook("player");
+bestLibrary.AvailableBooks();
+bestLibrary.GivenBooks();
 
+dune.RenamePublisher("Self Published");
+
+bestLibrary.ReturnBook("Dune");
+
+bestLibrary.AvailableBooks();
+bestLibrary.GivenBooks();
+
+bestLibrary.FindBookByAuthor("Frank Herbert");
+bestLibrary.FindBookByName("Player");
+bestLibrary.FindBookByPublisher("Crown");

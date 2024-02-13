@@ -23,6 +23,6 @@ public class Book
 
     public override string ToString()
     {
-        return $"{Name} by {Author} - published by {PublisherName}";
+        return $"- {Name} by {Author} - published by {PublisherName}";
     }
 }

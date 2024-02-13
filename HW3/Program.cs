@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using HW3;
+﻿using HW3;
 
 var myList = new CustomClass<int> { 22, 3, 0 };
 
